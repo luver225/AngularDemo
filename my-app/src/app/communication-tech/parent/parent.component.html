@@ -1,0 +1,17 @@
+<div class="content">
+  【父组件】
+  <div>
+    <input class="input" nz-input [(ngModel)]="parentInput" />
+  </div>
+  <div>
+    <label>{{parentLable}}</label>
+  </div>
+  <div nz-row>
+    <div nz-col nzSpan="12">
+      <app-child1 [parentInput] = "parentInput" (toParnet) = "getMessage($event)"></app-child1>
+    </div>
+    <div nz-col nzSpan="12">
+      <app-child2></app-child2>
+    </div>
+  </div>
+</div>

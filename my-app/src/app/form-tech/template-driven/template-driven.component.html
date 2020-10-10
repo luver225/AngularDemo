@@ -1,0 +1,22 @@
+<form nz-form class="login-form">
+  <nz-form-item>
+    <nz-form-label>用户名</nz-form-label>
+    <nz-form-control >
+      <nz-input-group >
+        <input type="text" nz-input [(ngModel)]="user.userName" name="userName" required maxlength="10"/>
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label>编号</nz-form-label>
+    <nz-form-control >
+      <nz-input-group >
+        <input type="number" nz-input [(ngModel)]="user.number" name="number" required floatValidator/>
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+
+  <button nz-button nzType="primary" (click)="set($event)">Set</button>
+  <button nz-button nzType="primary" (click)="get($event)">Get</button>
+</form>

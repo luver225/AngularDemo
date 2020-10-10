@@ -1,0 +1,26 @@
+
+<div>
+    <h1>管道演示：</h1>
+</div>
+<input class = "input"  nz-input  [(ngModel)]="pipeInput1"/>
+
+<p>小写转大写:{{ pipeInput1 | uppercase }}</p>
+
+
+<input class = "input"  nz-input  [(ngModel)]="pipeInput2"/>
+<p>精度0.1:{{ pipeInput2 | accuracy }}</p>
+
+<br><br><br><br><br>
+
+<div>
+    <h1>指令演示：</h1>
+</div>
+
+<div>字符长度5位数限制：<input class = "input"  nz-input  [(ngModel)]="directiveInput1"  maxlength="5"/></div>
+
+<br>
+
+<div>失焦后，精度变为0.1：<input class = "input"  nz-input  [(ngModel)]="directiveInput2"  accuracyDirective/></div>
+
+
+
