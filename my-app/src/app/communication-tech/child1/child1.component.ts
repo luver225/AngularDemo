@@ -8,30 +8,29 @@ import { CommunicationService } from '../communication.service';
 })
 export class Child1Component implements OnInit {
 
+  @Input()
+  parentInput: string;
+
+  @Output()
+  public toParnet = new EventEmitter<boolean>();
+
+  child2Message: string;
+
   constructor(
     private communicationService: CommunicationService) { }
 
   ngOnInit() {
     this.communicationService.messageEvent.subscribe(
-      data =>{
-        if(data)
-        {
+      data => {
+        if (data) {
           this.child2Message = "来自子组件2的消息"
         }
       }
     )
   }
 
-  @Input() 
-  parentInput: string;
-  
-  @Output() 
-  public toParnet = new EventEmitter<boolean>();
-
-  child2Message:string;
-
-  sendMessageToParent()
-  {
+  sendMessageToParent() {
     this.toParnet.emit(true);
   }
+  
 }

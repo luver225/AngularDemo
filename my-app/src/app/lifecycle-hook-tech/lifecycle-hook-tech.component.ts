@@ -18,8 +18,7 @@ export class LifecycleHookTechComponent implements OnInit {
     this.parentValue = 1;
   }
 
-  changeValue()
-  {
+  changeValue() {
     this.parentValue++;
   }
 

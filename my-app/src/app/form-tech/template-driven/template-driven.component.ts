@@ -31,11 +31,15 @@ export class TemplateDrivenComponent implements OnInit {
   }
 }
 
+
+/********************************************************************/
+//模板驱动表单中绑定的对象类
 export class User {
   userName: string;
   number: number;
 }
 
+//模板驱动表单中的自定义的校验，需要使用指令
 @Directive({
   selector: '[floatValidator]',
   providers: [{

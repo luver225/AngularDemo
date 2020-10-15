@@ -6,15 +6,15 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./parent.component.css']
 })
 export class ParentComponent implements OnInit {
+  
+  parentInput: string;
 
+  parentLable: string;
+  
   constructor() { }
 
   ngOnInit() {
   }
-
-  parentInput: string;
-
-  parentLable: string;
 
   getMessage(message: boolean) {
     if (message) {

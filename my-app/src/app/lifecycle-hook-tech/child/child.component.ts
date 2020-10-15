@@ -7,6 +7,10 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
 })
 export class ChildComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
 
+  //1, F12, 在Console中观察每个钩子函数的执行顺序，包括初始化时，@input属性改变时..
+  //2, 组件中有@input属性时，子组件在初始化时, constructor() --> ngOnChanges() --> ngOnInit()，在constructor()是获取不到@Input值的，在ngOnChanges(), ngOnInit()可以获取@Input值
+  //3, 父组件改变@Input()值，子组件会触发ngOnChanges()
+
   @Input()
   value: string;
 

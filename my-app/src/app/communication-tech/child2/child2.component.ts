@@ -14,9 +14,8 @@ export class Child2Component implements OnInit {
   ngOnInit() {
   }
 
-  sendMessageToChild1()
-  {
+  sendMessageToChild1() {
     this.communicationService.messageEvent.emit(true);
   }
-
+  
 }

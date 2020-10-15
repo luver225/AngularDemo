@@ -11,7 +11,7 @@ export class PipeDirectiveTechComponent implements OnInit {
 
   ngOnInit() {
   }
-  
+
   pipeInput1: string;
 
   pipeInput2: string;
@@ -22,6 +22,7 @@ export class PipeDirectiveTechComponent implements OnInit {
 
 }
 
+//自定义管道
 @Pipe({ name: 'accuracy' })
 export class AccuracyPipe implements PipeTransform {
   transform(value: string): string {
@@ -31,6 +32,8 @@ export class AccuracyPipe implements PipeTransform {
   }
 }
 
+
+//自定义指令
 @Directive({
   selector: '[accuracyDirective]'
 })
